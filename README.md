@@ -4,6 +4,8 @@ Open TMR System is an experimental, offline-first research software prototype fo
 
 **This v0.1.0 release is a software demonstration, not a real TMR experiment.** It does not acquire EEG, control sleep, deliver sensory stimuli to sleeping people, or infer clinical sleep stages.
 
+**Repository:** https://github.com/tau12w/open-tmr-system
+
 ## Research title
 
 “Comparative Evaluation of Auditory and Olfactory Targeted Memory Reactivation for Educational Memory Retention.”
@@ -17,7 +19,7 @@ python -m open_tmr.cli demo
 python -m unittest discover -s tests -v
 ```
 
-The demo creates `demo_output/` containing generated WAV files, a lesson JSON file, cue associations, sample session JSON, a simulated event timeline, and validation output. Everything is synthetic.
+The demo creates `demo_output/` containing generated WAV files, a lesson JSON file, cue associations, sample session JSON, a simulated event timeline, and validation output. Everything is synthetic and locally generated.
 
 ## Installation
 
@@ -37,6 +39,7 @@ schemas/           Versioned JSON schemas
 protocols/         Research and safety documentation
 docs/              Literature and software documentation
 integrations/      Placeholder descriptions for future exports and drivers
+core/              Reserved standalone modules, including Chapter-to-Audio
 tests/             Automated tests
 .github/workflows/ Continuous integration
 ```
@@ -60,7 +63,8 @@ tests/             Automated tests
 - `open_tmr/eeg.py`: sampling, signal-quality, and missing-data metadata abstractions.
 - `open_tmr/data.py`: anonymized synthetic session models and validation.
 - `open_tmr/cli.py`: offline demo and validation commands.
+- `core/chapter_to_audio/`: reserved Chapter-to-Audio interface and unsupported placeholder.
 
 ## Limitations
 
-This release cannot estimate sleep stages, classify EEG, verify hardware safety, implement TTS providers, or serve as an experimental protocol. It contains no TTS API integration and no copyrighted or third-party audio. It may be used to test software structure and generate reproducible synthetic cues.
+This release cannot estimate sleep stages, classify EEG, verify hardware safety, implement TTS providers, or serve as an experimental protocol. It contains no TTS API integration and no copyrighted source text.
