@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backends = ["setuptools.build_meta"]
+
+[project]
+name = "open-tmr-system"
+version = "0.1.0"
+description = "Offline research and educational audio infrastructure for Targeted Memory Reactivation studies"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Open TMR System contributors"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+open-tmr = "open_tmr.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["open_tmr*"]
